@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form">
+        <input id="username" type="username" placeholder="Enter your username">
+        <input id="password" type="password" placeholder="Enter your password">
+        <input type="submit" >
+    </form>
+</body>
+</html>
+
+<script>
+    document.querySelector("#form").addEventListener("submit",loginFun)
+  
+    var loginData = JSON.parse(localStorage.getItem("sinUpLocal"))
+    console.log(loginData)
+
+
+
+    function loginFun(event){
+        event.preventDefault()
+
+        var username = document.querySelector("#username").value
+        var password = document.querySelector("#password").value
+
+        console.log(username, password)
+        var flag=false;
+        for(var i=0;i<loginData.length;i++){
+            if(loginData[i].username == username && loginData[i].password == password){
+                flag=true
+                break
+            }
+        }
+        if(flag==true){
+            console.log("Login success")
+        }
+        else{
+            console.log("Login failed")
+        }
+    }
+</script>
