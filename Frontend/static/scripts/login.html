@@ -4,14 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login.css">
     <title>Document</title>
 </head>
 <body>
-    <form id="form">
-        <input id="username" type="username" placeholder="Enter your username">
-        <input id="password" type="password" placeholder="Enter your password">
-        <input type="submit" >
-    </form>
+    <div class="SignUpMainDiv">
+        <form id="form">
+            <div>
+                <h2>Log In</h2>
+              </div>
+          <div>
+            <input id="username" type="username" placeholder="Enter your username">
+          </div>
+            <div>
+                <input id="password" type="password" placeholder="Enter your password">
+            </div>
+            
+            <div>
+                <input onclick="window.location.href=''" style="width: 310px;background-color: aquamarine;border-color: aquamarine;" type="submit" value="Log IN">
+            </div>
+            <div>
+                <a href="signUp.html">Create New Account</a>
+            </div>
+
+            <div class="vl">
+                <span class="vl-innertext">or</span>
+              </div>
+        
+        
+              <div class="col">
+                <a href="#" class="fb btn">
+                  <i class="fa fa-facebook fa-fw"></i>  Facebook
+                 </a>
+                <a href="#" class="twitter btn">
+                  <i class="fa fa-twitter fa-fw"></i>  Twitter
+                </a>
+                <a href="#" class="google btn"><i class="fa fa-google fa-fw">
+                  </i>  Google+
+                </a>
+              </div>
+        </form>
+    </div>
 </body>
 </html>
 
@@ -38,7 +71,8 @@
             }
         }
         if(flag==true){
-            console.log("Login success")
+            alert("Login success")
+           
         }
         else{
             console.log("Login failed")
