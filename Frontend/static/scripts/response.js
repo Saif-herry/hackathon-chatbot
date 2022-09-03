@@ -5,7 +5,7 @@ function getBotResponse(input) {
     } else if (input == "vaibhav") {
         return "good boy";
     } else if (input == "saif") {
-        return "gandu";
+        return "good";
     }
 
     // Simple responses
